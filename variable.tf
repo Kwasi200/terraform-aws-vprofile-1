@@ -2,7 +2,7 @@
 variable "region_name" {
   description = "name of region"
   default     = "eu-west-2"
-  }
+}
 
 variable "VPC_NAME" {
   default = "vprofile-vpc"
@@ -11,7 +11,7 @@ variable "VPC_NAME" {
 variable "cidr_block" {
   description = "Cidr block for vpc"
   default     = "10.0.0.0/16"
-  }
+}
 
 
 variable "public-sub1" {
@@ -41,7 +41,7 @@ variable "priv-sub1" {
 variable "priv-sub2" {
   description = "private_subnet_2"
   default     = "10.0.5.0/24"
-  }
+}
 
 variable "priv-sub3" {
   description = "private_subnet_3"
@@ -52,17 +52,17 @@ variable "priv-sub3" {
 variable "AZ-1" {
   description = "availability Zone"
   default     = "eu-west-2a"
-  }
+}
 
 variable "AZ-2" {
   description = "availability Zone"
   default     = "eu-west-2b"
-  }
+}
 
 variable "AZ-3" {
   description = "availability Zone"
   default     = "eu-west-2c"
- }
+}
 variable "destination_cidr_block" {
   description = "destination cidr block"
   default     = "0.0.0.0/0"
@@ -85,12 +85,12 @@ variable "amazon_ubuntu" {
 variable "instance_type" {
   description = "EC2 instance"
   default     = "t2.micro"
- }
+}
 
 variable "key_name" {
   description = "Key pair name"
   default     = "fuentes"
-  }
+}
 
 # database variables
 
@@ -104,7 +104,7 @@ variable "instance_class" {
 variable "engine" {
   description = "database engine type"
   default     = "mysql"
-  type       = string
+  type        = string
 }
 
 variable "engine_version" {
@@ -121,8 +121,8 @@ variable "allocated_storage" {
 
 variable "parameter_group_name" {
   description = "parameter group name"
-  default    = "default.mysql5.7"
-  type       = string
+  default     = "default.mysql5.7"
+  type        = string
 }
 
 

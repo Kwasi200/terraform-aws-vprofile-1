@@ -3,13 +3,13 @@
 
 
 resource "aws_vpc" "vprofile-vpc" {
-  cidr_block       = "10.0.0.0/16"
+  cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
-  enable_dns_support = true
+  enable_dns_support   = true
   tags = {
     Name = "vprofile-vpc"
   }
-  }
+}
 
 
 
@@ -81,19 +81,22 @@ resource "aws_subnet" "priv-sub3" {
 
 # Creating Internet Gateway
 # internet gateway
-resource "aws_internet_gateway" "int-gatwy" {
+
+
+resource "aws_internet_gateway" "IntGwy" {
   vpc_id = aws_vpc.vprofile-vpc.id
 
   tags = {
-    Name = "int-gatwy"
+    Name = "IntGwy"
   }
 }
+
 
 # Elastic Ip
 resource "aws_eip" "nat_eip" {
   vpc                       = true
   associate_with_private_ip = var.priv-sub1
-  depends_on                = [aws_internet_gateway.int-gatwy]
+  depends_on                = [aws_internet_gateway.IntGwy]
   tags = {
     Name = "nat_eip"
   }
@@ -110,7 +113,7 @@ resource "aws_nat_gateway" "Nat-gatwy" {
   # subnet_id      = aws_subnet.public_subnet2.id
 
   tags = {
-    Name = "nat-gatwy"
+    Name = "Nat-gatwy"
   }
 }
 

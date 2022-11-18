@@ -5,7 +5,7 @@
 #variable "AMIS" {
 #  type = map(any)
 #  default = {
-#    eu-west-2 = "ami-0f1f4b28f318ccd97"
+#    eu-west-2 = "ami -0f1f4b28f318ccd97"
 #    eu-west-2 = "ami-08a36276cbbd093da"
 #    eu-west-2 = "ami-07cf622713ac7fbbb"
 #  }
