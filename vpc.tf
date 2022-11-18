@@ -92,7 +92,7 @@ resource "aws_internet_gateway" "int-gatwy" {
 # Elastic Ip
 resource "aws_eip" "nat_eip" {
   vpc                       = true
- # associate_with_private_ip = var.priv-sub1
+  associate_with_private_ip = var.priv-sub1
   depends_on                = [aws_internet_gateway.int-gatwy]
   tags = {
     Name = "nat_eip"
