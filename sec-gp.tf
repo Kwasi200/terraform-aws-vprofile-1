@@ -50,10 +50,10 @@ resource "aws_security_group" "vprofile-prod-sg" {
   vpc_id      = aws_vpc.vprofile-vpc.id
 
   ingress {
-    description = "TLS from VPC"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
+    description     = "TLS from VPC"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
     security_groups = [aws_security_group.vprofile-bastion-sg.id]
   }
 
@@ -72,10 +72,10 @@ resource "aws_security_group" "vprofile-backend-sg" {
   vpc_id      = aws_vpc.vprofile-vpc.id
 
   ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = -1
-    security_groups  = [aws_security_group.vprofile-prod-sg.id]
+    from_port       = 0
+    to_port         = 0
+    protocol        = -1
+    security_groups = [aws_security_group.vprofile-prod-sg.id]
   }
 
   egress {
@@ -113,9 +113,9 @@ resource "aws_security_group" "sec-gp" {
 
   }
 
+}
 
-
-  # HTTPS access from anywhere
+# HTTPS access from anywhere
 
 
 # Create Database Security Group

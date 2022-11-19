@@ -127,7 +127,7 @@ variable "parameter_group_name" {
 
 
 
-variable "USERNAME" {
+variable "username" {
   default = "ubuntu"
 }
 
