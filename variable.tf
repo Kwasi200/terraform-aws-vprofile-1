@@ -136,11 +136,11 @@ variable "rmquser" {
 }
 
 variable "rmqpass" {
-  default = "1010"
+  default = "whatthefuckareyousaying?"
 }
 
 variable "dbpass" {
-  default = " 1010"
+  default = "heytherewegoagain"
 }
 
 variable "dbname" {
